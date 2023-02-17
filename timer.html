@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+  <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+  
+  <title>TIME TO BDAY</title>
+  
+  
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  
+  
+<style>
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #faf9f8;
+  display: flex;
+  font: 200 2.25em "Lato";
+}
+
+.container {
+  color: #ea4c4c;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+.presents
+{	
+	filter: drop-shadow( 0 0 2em rgba( 0,0,0,.3 ) );
+	background:
+		
+		/* blue + red shared broder */
+		linear-gradient( #4d4d4d, #4d4d4d ) left 19.4em bottom 6.3em / .3em 9.3em,
+		
+		/* right red box -- borders */
+		linear-gradient( #4d4d4d, #4d4d4d ) right 14.2em bottom 6.3em / .3em 11em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 12.6em bottom 6.3em / .3em 11em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 21.3em bottom 15.3em / .3em 2em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 5.3em bottom 15.3em / .3em 2em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 5.3em bottom 17.3em / 16.3em .3em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 6.1em bottom 6.3em / .3em 9.3em,
+		
+		/* right red box -- ribbon top */
+		radial-gradient( ellipse 50% 50% at 50% 80%, 
+			#e67d8b calc( 100% - .4em ), 
+			#4d4d4d calc( 100% - .6em ),
+			#4d4d4d calc( 100% - .1em ),
+			transparent 100%
+		) right 11.9em bottom 17.5em / 3em 2em,
+		
+		conic-gradient( from 125deg, 
+			#e67d8b 50%,
+			transparent 50%
+		) right 13.9em bottom 17.5em / 3em 3em,
+		
+		conic-gradient( from 55deg, 
+			#e67d8b 50%,
+			transparent 50%
+		) right 9.9em bottom 17.5em / 3em 3em,
+		
+		conic-gradient( from 125deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) right 13.4em bottom 17.5em / 3.8em 3.8em,
+		
+		conic-gradient( from 55deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) right 9.5em bottom 17.5em / 3.8em 3.8em,
+		
+		/* right red box -- ribbon */
+		linear-gradient( #e67d8b, #e67d8b ) right 12.6em bottom 6.3em / 1.8em 11em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) right 5.3em bottom 15.3em / 16.3em .3em, /* border under ribbon */ 
+		
+		/* right red box -- top part */
+		linear-gradient( #dd5d6c, #dd5d6c ) right 5.5em bottom 15.5em / 16em 2em,
+		
+		/* right red box -- right circles */
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 7.5em bottom 11.125em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 7.5em bottom 8.375em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 9.5em bottom 12.5em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 9.5em bottom 9.75em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 9.5em bottom 7em / 2em 2em,
+		
+		/* right red box -- left circles */
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 17.5em bottom 11.125em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 17.5em bottom 8.375em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 15.5em bottom 12.5em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 15.5em bottom 9.75em / 2em 2em,
+		
+		radial-gradient( circle .7em, #eb9ea8 100%, transparent 100% ) right 15.5em bottom 7em / 2em 2em,
+		
+		/* right red box -- bottom part */
+		linear-gradient( #dd5d6c, #dd5d6c ) right 6.4em bottom 6.3em / 14em 10em,
+		
+		/* left blue box -- borders */
+		linear-gradient( #4d4d4d, #4d4d4d ) left 15.3em bottom 6.3em / .3em 7em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 11.4em bottom 6.3em / .3em 7em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 6.6em bottom 6.3em / .3em 5em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 5.6em bottom 11.3em / .3em 2.3em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 5.6em bottom 13.3em / 14em .3em,
+		
+		/* left blue box -- ribbon top */
+		radial-gradient( ellipse 50% 50% at 50% 80%, 
+			#96adbf calc( 100% - .4em ), 
+			#4d4d4d calc( 100% - .6em ),
+			#4d4d4d calc( 100% - .1em ),
+			transparent 100%
+		) left 11.9em bottom 13.5em / 3em 2em,
+		
+		conic-gradient( from 125deg, 
+			#96adbf 50%,
+			transparent 50%
+		) left 9.9em bottom 13.5em / 3em 3em,
+		
+		conic-gradient( from 55deg, 
+			#96adbf 50%,
+			transparent 50%
+		) left 13.9em bottom 13.5em / 3em 3em,
+		
+		conic-gradient( from 125deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) left 9.5em bottom 13.5em / 3.8em 3.8em,
+		
+		conic-gradient( from 55deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) left 13.4em bottom 13.5em / 3.8em 3.8em,
+		
+		/* left blue box -- ribbon */
+		linear-gradient( #96adbf, #96adbf ) left 11.4em bottom 6.3em / 4em 7em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 5.6em bottom 11.3em / 14em .3em, /* border under ribbon */
+		
+		/* left blue box -- top part */
+		linear-gradient( #d5dee5, #d5dee5 ) left 6em bottom 11.6em / 13.4em 2em,
+		
+		/* left blue box -- bottom part */
+		linear-gradient( 135deg,
+			#d5dee5 2em, 
+			#96adbf 2em,
+			#96adbf 4em,
+			#d5dee5 4em, 
+			#d5dee5 6em,
+			#96adbf 6em,
+			#96adbf 8em,
+			#d5dee5 8em, 
+			#d5dee5 10em,
+			#96adbf 10em,
+			#96adbf 12em,
+			#d5dee5 12em, 
+			#d5dee5 14em
+		) left 6.8em bottom 6.3em / 12.6em 5em,
+		
+		/* orange box -- borders */
+		linear-gradient( #4d4d4d, #4d4d4d ) left 23em bottom 10em / .3em 13em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 18.7em bottom 10em / .3em 13em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 30.3em bottom 20em / .3em 3.3em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 10.7em bottom 20em / .3em 3.3em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 11em bottom 23em / 19.6em .3em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 28.5em bottom 10em / .3em 10em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 13em bottom 10em / .3em 10em,
+		
+		/* orange box -- ribbon top */
+		radial-gradient( ellipse 50% 50% at 50% 80%, 
+			#ebb390 calc( 100% - .4em ), 
+			#4d4d4d calc( 100% - .6em ),
+			#4d4d4d calc( 100% - .1em ),
+			transparent 100%
+		) left 19.5em bottom 23.3em / 3em 2em,
+		
+		conic-gradient( from 125deg, 
+			#ebb390 50%,
+			transparent 50%
+		) left 17.5em bottom 23.3em / 3em 3em,
+		
+		conic-gradient( from 55deg, 
+			#ebb390 50%,
+			transparent 50%
+		) left 21.5em bottom 23.3em / 3em 3em,
+		
+		conic-gradient( from 125deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) left 17.1em bottom 23.3em / 3.8em 3.8em,
+		
+		conic-gradient( from 55deg, 
+			#4d4d4d 50%,
+			transparent 50%
+		) left 21.1em bottom 23.3em / 3.8em 3.8em,
+		
+		/* orange box -- ribbon */
+		linear-gradient( #ebb390, #ebb390 ) left 19em bottom 10em / 4em 13em,
+		
+		linear-gradient( #4d4d4d, #4d4d4d ) left 11em bottom 20em / 19.6em .3em, /* broder under ribbon */
+		
+		/* orange box -- top part */
+		linear-gradient( #de7861, #de7861 ) left 11em bottom calc( 50% + 1.5em ) / 19.5em 3em,
+		
+		/* orange box -- bottom part */
+		linear-gradient( #de7861, #de7861 ) left 13em bottom calc( 50% - 5em ) / 15.5em 10em,
+		
+		/* bottom line */
+		linear-gradient( #4d4d4d, #4d4d4d ) left 50% bottom 6em / 80% .3em;
+	
+	background-repeat: no-repeat;
+	font-size: 2vmin;
+	height: 40em;
+	width: 40em;
+	position: relative;
+}
+
+.presents::before,
+.presents::after
+{
+	content: '';
+	display: block;
+}
+
+.presents::before
+{
+	content: '16';
+	color: #ffcf01;
+	font-family: Chango;
+	font-size: 4em;
+	position: absolute;
+	left: 27.5%;
+	top: 31.9%;
+	-webkit-text-stroke-width: .05em;
+  	-webkit-text-stroke-color: #4d4d4d;
+}
+
+.grid-container {
+  display:inline-table;
+  grid-template-columns: 1fr;
+  background-color: white;
+  padding: 3px;
+}
+.grid-item {
+  background-color: white;
+  padding: 0px;
+  align-content: center;
+  align-items: stretch;
+}
+
+
+.presents::after
+{
+	
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="grid-container" align="center">
+     <div ><div class="presents" align="center"></div></div>
+    <div >
+
+  <h1 id="headline">Can't wait for it</h1>
+  <div id="countdown">
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+  <div id="content" class="emoji">
+    <span>🥳</span>
+    <span>🎉</span>
+    <span>🎂</span>
+  </div>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+(function () {
+  const second = 1000,
+  minute = second * 60,
+  hour = minute * 60,
+  day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+  dd = String(today.getDate()).padStart(2, "0"),
+  mm = String(today.getMonth() + 1).padStart(2, "0"),
+  yyyy = today.getFullYear(),
+  nextYear = yyyy + 1,
+  dayMonth = "02/19/",
+  birthday = dayMonth + yyyy;
+
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+
+  const countDown = new Date(birthday).getTime(),
+  x = setInterval(function () {
+
+    const now = new Date().getTime(),
+    distance = countDown - now;
+
+    document.getElementById("days").innerText = Math.floor(distance / day),
+    document.getElementById("hours").innerText = Math.floor(distance % day / hour),
+    document.getElementById("minutes").innerText = Math.floor(distance % hour / minute),
+    document.getElementById("seconds").innerText = Math.floor(distance % minute / second);
+
+    //do something later when date is reached
+    if (distance < 0) {
+      document.getElementById("headline").innerText = "It's my birthday!";
+      document.getElementById("countdown").style.display = "none";
+      document.getElementById("content").style.display = "block";
+      clearInterval(x);
+    }
+    //seconds
+  }, 0);
+})();
+//# sourceURL=pen.js
+    </script>
+</div>
+</div>
+</body>
+
+</html>
